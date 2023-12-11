@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import type { BrowserWindow as BW } from 'electron';
 import path from 'path';
-// import * as Sentry from "@sentry/electron";
+// import * as Sentry from "@sentry/electron/main";
 // Sentry.init({ dsn: "https://f04c94535f8041a4883b47c7420fa7bd@o688242.ingest.sentry.io/5773229" });
 const gotTheLock = app.requestSingleInstanceLock();
 let mainWindow: BW | null = null;
