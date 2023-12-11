@@ -1,6 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
-
+// import * as Sentry from "@sentry/electron";
+// Sentry.init({ dsn: "https://f04c94535f8041a4883b47c7420fa7bd@o688242.ingest.sentry.io/5773229" });
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit();
