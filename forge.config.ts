@@ -6,7 +6,9 @@ import { MakerRpm } from '@electron-forge/maker-rpm';
 import { VitePlugin } from '@electron-forge/plugin-vite';
 
 const config: ForgeConfig = {
-  packagerConfig: {},
+  packagerConfig: {
+    asar: true
+  },
   rebuildConfig: {},
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
   plugins: [
@@ -31,6 +33,10 @@ const config: ForgeConfig = {
         },
       ],
     }),
+    {
+      name: '@electron-forge/plugin-auto-unpack-natives',
+      config: {}
+    }
   ],
 };
 
